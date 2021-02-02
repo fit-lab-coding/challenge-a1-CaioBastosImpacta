@@ -14,7 +14,13 @@ public class ImcCalculator {
 	public static String calculate(double peso, double altura) {
 		double alturaMathTwo = Math.pow(altura, 2);
 	    double indice = peso / alturaMathTwo;
+	    double valor = 0;
 	    
+	    return verificaIndiceIme(indice, valor);
+	    
+	}
+
+	private static String verificaIndiceIme(double indice, double valor) {
 	    if (indice < 18.5) return MAGREZA;
 	    if (indice < 24.9) return NORMAL;
 	    if (indice < 30) return SOBREPESO;
