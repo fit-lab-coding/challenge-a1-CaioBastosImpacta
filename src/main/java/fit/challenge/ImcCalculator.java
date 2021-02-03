@@ -12,12 +12,15 @@ public class ImcCalculator {
 	private static final String OBESIDADE = "Obesidade";
 	
 	public static String calculate(double peso, double altura) {
-		double alturaMathTwo = Math.pow(altura, 2);
-	    double indice = peso / alturaMathTwo;
-	    double valor = 0;
+		double valor = 0;
+		double indice = calculaImc(peso, altura);
 	    
 	    return verificaIndiceIme(indice, valor);
 	    
+	}
+
+	private static double calculaImc(double peso, double altura) {
+		return peso / Math.pow(altura, 2);
 	}
 
 	private static String verificaIndiceIme(double indice, double valor) {
