@@ -12,10 +12,9 @@ public class ImcCalculator {
 	private static final String OBESIDADE = "Obesidade";
 	
 	public static String calculate(double peso, double altura) {
-		double valor = 0;
 		double indice = calculaImc(peso, altura);
 	    
-	    return verificaIndiceIme(indice, valor);
+	    return verificaIndiceIme(indice);
 	    
 	}
 
@@ -23,7 +22,7 @@ public class ImcCalculator {
 		return peso / Math.pow(altura, 2);
 	}
 
-	private static String verificaIndiceIme(double indice, double valor) {
+	private static String verificaIndiceIme(double indice) {
 	    if (indice < 18.5) return MAGREZA;
 	    if (indice < 24.9) return NORMAL;
 	    if (indice < 30) return SOBREPESO;
