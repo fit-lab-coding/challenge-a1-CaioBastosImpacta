@@ -12,7 +12,7 @@ public class ImcCalculator {
 	private static final String OBESIDADE = "Obesidade";
 	
 	public static String calculate(double peso, double altura) {
-		double indice = calculaImc(peso, altura);
+		var indice = calculaImc(peso, altura);
 	    
 	    return verificaIndiceIme(indice);
 	    
